@@ -159,10 +159,10 @@ import Accelerate
     func encodeImage(image: UIImage, asBase64: Bool, asJpeg: Bool) -> String {
         let imageData: NSData;
         
-        let scaledImage = image.resizeWithScaleAspectFitMode(to:1028)
+        let scaledImage = image.resizeWithScaleAspectFitMode(to:1080)
         
         if(asJpeg) {
-           imageData = UIImageJPEGRepresentation(scaledImage!,0.8)! as NSData;
+           imageData = UIImageJPEGRepresentation(scaledImage!,0.5)! as NSData;
         } else {
            imageData = UIImagePNGRepresentation(scaledImage!)! as NSData;
         }
