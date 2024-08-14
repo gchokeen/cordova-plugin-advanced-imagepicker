@@ -60,6 +60,11 @@ module.exports = {
         prepareCmd: 'npm run doctoc'
       }
     ],
+    ['@semantic-release/exec',
+      {
+        prepareCmd: 'node ./scripts/set_plugin_version.js -v ${nextRelease.version}'
+      }
+    ],
     [
       '@semantic-release/changelog',
       {
@@ -70,7 +75,7 @@ module.exports = {
       '@semantic-release/git',
       {
         message: 'chore(release): ${nextRelease.version}',
-        assets: ['package.json', 'package-lock.json', 'CHANGELOG.md', 'readme.md']
+        assets: ['package.json', 'package-lock.json', 'CHANGELOG.md', 'readme.md', 'plugin.xml']
       }
     ],
     [

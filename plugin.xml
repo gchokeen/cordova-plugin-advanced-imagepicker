@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<plugin id="cordova-plugin-advanced-imagepicker" version="1.4.0" xmlns="http://apache.org/cordova/ns/plugins/1.0">
+<plugin id="cordova-plugin-advanced-imagepicker" version="1.6.2" xmlns="http://apache.org/cordova/ns/plugins/1.0">
     <name>AdvancedImagePicker</name>
     <description>Cordova Plugin for an advanced (multiple) ImagePicker</description>
 
@@ -42,21 +42,9 @@
                 <source url="https://cdn.cocoapods.org/"/>
             </config>
             <pods use-frameworks="true">
-                <pod name="YPImagePicker" spec="4.5.0"/>
+                <pod name="YPImagePicker" spec="5.2.1"/>
             </pods>
         </podspec>
-
-        <config-file target="*-Info.plist" parent="NSCameraUsageDescription">
-            <string>This app requires access to the camera to take pictures and videos.</string>
-        </config-file>
-
-        <config-file target="*-Info.plist" parent="NSPhotoLibraryUsageDescription">
-            <string>This app requires access to the photo library to select pictures and videos.</string>
-        </config-file>
-
-        <config-file target="*-Info.plist" parent="NSMicrophoneUsageDescription">
-            <string>This app requires access to the microphone to record videos.</string>
-        </config-file>
 
         <dependency id="cordova-plugin-add-swift-support" version="2.0.2"/>
     </platform>
